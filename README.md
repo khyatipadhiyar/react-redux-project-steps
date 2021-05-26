@@ -15,6 +15,8 @@ import StoreData from '../Data/shop.data';
 const initialData= {StoreData:StoreData}
 const storeDataReducer = (state=initialData,action) =>{
   switch(action.type){
+    case '--------':
+      return **<modified state>**;
     default:
       return state;
   }
