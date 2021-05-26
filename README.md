@@ -18,5 +18,6 @@ const storeDataReducer = (state=initialData,action) =>{
       return state;
   }
 }
-export default storeDataReducer;```
+export default storeDataReducer;
+```
 
