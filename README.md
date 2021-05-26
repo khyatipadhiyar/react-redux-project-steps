@@ -16,7 +16,7 @@ const initialData= {StoreData:StoreData}
 const storeDataReducer = (state=initialData,action) =>{
   switch(action.type){
     case '--------':
-      return **<modified state>**;
+      return 'modified state';
     default:
       return state;
   }
