@@ -29,8 +29,9 @@ import storeDataReducer from './storeData.reducers';
 
 import {combineReducers} from 'redux';
 
-const allReducer =  combineReducers({
+const RootReducer =  combineReducers({
   store:storeDataReducer
 
 })
+export default RootReducer
 ```
