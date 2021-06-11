@@ -61,7 +61,7 @@ ReactDOM.render(
 ### Now start creating components 
 ### Now as required start creating Actions 
 Create file called index.js in Action Folder.
-Now created individual action as shown below.
+Now create individual actions as shown below.
 ```
 export const LoadCovinPinData =(data)=>{
     return {
@@ -69,4 +69,34 @@ export const LoadCovinPinData =(data)=>{
         payload: data
     }
 }
+export const LoadCovinDistData =(data)=>{
+    return {
+        type:'LOAD_COVINDIST_DATA',
+        payload: data
+    }
+}
+```
+### Now Dispatch the action from required component and don't forget to put it in case statment of concern reducer.
+```
+import {useEffect} from 'react';
+import {useDispatch,useSelector} from 'react-redux'
+import {LoadCovinPinData}from '../Actions';
+
+const CovinPin = () => {
+    const dispatch = useDispatch()
+    useEffect(() => {
+        fetch('https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode=396050&date=10-06-2021')
+        .then(response => response.json())
+        .then(data =>dispatch(LoadCovinPinData(data.sessions)));
+      },[]);
+
+    const dataPin = useSelector(state=>state.covinPinReducer)
+   
+    return (
+        <div>
+          { dataPin.covinPin.map(el=>(<p>{el.min_age_limit}</p>))}
+        </div>
+    )
+}
+export default CovinPin
 ```
