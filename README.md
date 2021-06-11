@@ -115,3 +115,4 @@ const covinPinReducer =(state=InitialState,action)=>{
 export default covinPinReducer;
 ```
 ### finally add all component in app.js
+🙈🙉
