@@ -100,3 +100,17 @@ const CovinPin = () => {
 }
 export default CovinPin
 ```
+==========================================================================================================
+Updated reducer code with action type.
+```
+const InitialState = [];
+const covinPinReducer =(state=InitialState,action)=>{
+    switch (action.type) {
+        case 'LOAD_COVINPIN_DATA':
+            return {covinPin:action.payload}
+        default:
+            return state;
+    }
+}
+export default covinPinReducer;
+```
