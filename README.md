@@ -100,8 +100,8 @@ const CovinPin = () => {
 }
 export default CovinPin
 ```
-==========================================================================================================
-Updated reducer code with action type.
+========================================================================
+<br>Updated reducer code with action type.
 ```
 const InitialState = [];
 const covinPinReducer =(state=InitialState,action)=>{
