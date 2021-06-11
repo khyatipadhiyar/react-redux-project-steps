@@ -58,4 +58,15 @@ ReactDOM.render(
   document.getElementById('root')
 );
 ```
-
+### Now start creating components 
+### Now as required start creating Actions 
+Create file called index.js in Action Folder.
+Now created individual action as shown below.
+```
+export const LoadCovinPinData =(data)=>{
+    return {
+        type:'LOAD_COVINPIN_DATA',
+        payload: data
+    }
+}
+```
