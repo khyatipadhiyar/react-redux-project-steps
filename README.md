@@ -1,4 +1,9 @@
 # react-redux-project-steps
+
+## Install redux and react-redux
+``` 
+  npm i redux react-redux
+```
 ## Create directories
 1. Action
 2. components
